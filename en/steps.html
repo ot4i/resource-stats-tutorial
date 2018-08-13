@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+ 
+	
+<!-- header::Start -->
+	<head>
+		<!-- Use Internet Explorer 9 Standards mode for Eclipse Browser Control - https://www.eclipse.org/swt/faq.php#browsernativeie and https://msdn.microsoft.com/en-us/library/jj676915%28v=vs.85%29.aspx -->
+  		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+		
+		<!-- Next 2 http=equiv headers required to disable caching the Eclipse Browser Widget -->
+		<meta http-equiv="Pragma" content="no-cache">
+  		<meta http-equiv="Expires" content="-1">
+
+		<meta charset="UTF-8"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="copyright" content="Copyright IBM Corporation 2014" />
+		<meta name="abstract" content="IBM Integration Bus V10 Tutorial">
+		<meta name="author" content="IBM">
+		<meta name="description" content="IBM Integration Bus V10 Tutorial">
+		<meta name="keywords" content="keywords" > 
+		<meta name="robots" content="index,follow">
+		<meta name="source" content="IBM Integration Bus V10 Tutorial" /> 
+		
+		<title>IBM Integration Bus V10 Tutorial</title>
+
+    	<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/app.css" />
+    	
+		<script src="http://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+	</head>
+<!-- header::End -->
+<!-- body::Start -->
+		<body>
+  	<!-- body content here -->
+	<div class="row">
+	  <div class="small-12 medium-12 large-12 columns">
+	    <p> </p>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="small-9 medium-9 large-9 columns">
+	    <h4 class="title">Tracking Resource Statistics <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	  </div>
+	  <div class="small-3 medium-3 large-3 columns">
+		<a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm')" class="small right helplink">IBM Knowledge Center</a> 
+	  </div>
+	</div> 
+	<hr>
+	<div class="row">
+		<div class="small-10 medium-10 large-10 columns">
+		<h5> Learn how turn on resource statistics tracking and view them in the WebUI. </h5>
+		</div>
+		<div class="small-2 medium-2 large-2 columns">
+			<button class="small radius button right" tabindex="0" id="backToGallery" onclick="backToGallery()"> Back To Gallery
+			</button>
+		</div>
+	</div>
+	<div class="row">          
+		  <div class="small-12 medium-12 large-12 columns">
+			<ul class="tabs vertical"> 
+				<li class="tab-title tab-title-small active">
+				  <a href="javascript:;" onclick="show('panel21')">Create</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel31')">Prepare</a> 
+				</li>
+				<li class="tab-title tab-title-small">
+				  <a href="javascript:;" onclick="show('panel41')">Run</a> 
+				</li>
+			</ul>
+			<!-- editing -->
+			<div class="tabs-content panel-thin-blue vertical"> 
+		    	<div class="content active" id="panel21">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				      	<div class="row content-details">
+					      	<h4>Import projects</h4>
+					        
+						    
+								<p> When you click Import, 2 entities will be created in your workspace: the <span class="application">ResourceStatsApp</span> application, conatining two message flows, and the <span class="application">ResourceStatsBar</span> BAR file. </p>
+								
+							
+								<p> The contents of this tutorial will be explained in more detail when you move on to the Prepare tab, along with the setup steps you need to complete before viewing the statistics. </p>
+								
+							
+						</div>
+						
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="importArtifacts(); openResource('EventRoutingFlow')"> Import <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>
+										
+				    </div>
+					
+		    	</div>
+		    	<div class="content" id="panel31">
+					
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+						<div class="row content-details">
+						  	<h4>Prepare an Integration Server</h4>
+						    
+						    
+								<p>  </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Assuming you are using a Windows platform, open an App Connect Enterprise Command Console and create the working directory for our server using the following command: <br><code>mqsicreateworkdir C:\TESTSERVER</code>
+										
+										</li>
+									
+										<li> Navigate to this directory and locate the file 'server.conf.yaml'. Open it, uncomment and set the following parameters under Resource to:<br><span class="code">reportingOn: true<br>outputFormat: 'file'</span><br>Save and close this file.
+										
+										</li>
+									
+										<li> In the ACE Toolkit, open both the message flows in the ResourceStatsApp Application. Double click on all the 'File Output' nodes and under the Basic tab change the Directory field to the path of your server's working directory. Do the same with the 'Input Directory' field in the 'File Input' node.
+										
+										</li>
+									
+										<li> Start the server using the command:<br><code>IntegrationServer --work-dir C:\TESTSERVER --name TESTSERVER --admin-rest-api 7600 --http-port-number 7800 --console-log</code><br> in the ACE Command Console and deploy the BAR file in the Application Development Panel.
+										
+										</li>
+									
+										<li> Right click on the server in the Toolkit and launch the WebUI.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+								<p> Tip: To uncomment something simply remove the preceeding '#', but be careful not to uncomment anything other config parameters! </p>
+								
+							
+						</div>
+							
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="deployArtifacts()"> Deploy <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/back-right-previous_128-orange.png"></a></h4>						
+				    					
+				    </div>
+					
+		    	</div>
+		    	<div class="content" id="panel41">
+		    		
+		    		<div class="small-10 medium-10 large-10 columns divider">
+					
+				    	<div class="row content-details">
+					      	<h4>Follow these steps to complete the tutorial</h4>
+					        
+						    
+								<p> Follow the following steps to complete the tutorial. </p>
+								
+								
+									
+									<ol>
+									
+									
+										<li> Navigate to a Command Prompt, cd to your toolkit's current workspace and run this command: <br><code>curl -X POST http://localhost:7800/fileIn -d @.\Transformation_ESQL\input.xml</code>
+										
+										</li>
+									
+										<li> Assuming you did not get a 404 from the server, open a new Command Prompt and cd to your server's working directory. If you see a file named 'outputRaw', after a short delay this should be replaced by 2 files named 'output.txt' and 'output.xml'. Open these and view to contents if you wish.
+										
+										</li>
+									
+										<li> Open the WebUI for the server.
+										
+										</li>
+									
+										<li> Navigate to the 'Resource Statistics' tab on the navigation bar, then select 'File' on the vertical list.
+										
+										</li>
+									
+										<li> After waiting a moment, you should begin to see all the graphs (Files Read, Files Created etc.) begin to rise with direct correlation to the amount of data read processed by the server.
+										
+										</li>
+									
+										<li> Try sending a few more of the same curl requests after waiting a short time, the graph should continue to rise.
+										
+										</li>
+									
+										<li> While many graphs will be remain blank, feel free to browse the other statistics tabs and graphs in your own time.
+										
+										</li>
+									
+									
+									</ol>
+									
+								
+							
+						</div>
+							
+					</div>
+					
+					<div class="small-2 medium-2 large-2 columns">
+					
+					
+					
+					
+					
+					<h4 class="tkaction"><a href="javascript:;" onclick="cleanUp()" title="Clean up and remove any changes in your workspace made by the tutorial."> Clean Up <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/close-cancel-error_128-red.png"></a></h4>
+				    
+					
+				    </div>
+					
+				</div>	
+			</div> <!-- tab-content -->
+		</div> <!-- columns -->
+	  </div> <!-- row --></body>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="http://ot4i.github.io/iib-tutorials/js/main.js"></script>
+	</body>
+<!-- body::End -->
+
+</html>
