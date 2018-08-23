@@ -24,13 +24,13 @@
 		
 		<title>IBM Integration Bus V10 Tutorial</title>
 
-    	<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/main.css" />
-		<link rel="stylesheet" href="http://ot4i.github.io/iib-tutorials/css/app.css" />
+    	<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/main.css" />
+		<link rel="stylesheet" href="https://ot4i.github.io/iib-tutorials/css/app.css" />
     	
-		<script src="http://ot4i.github.io/iib-tutorials/js/json2.js"></script>
-		<script src="http://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
-		<script src="http://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
-		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/json2.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/js2java_steps.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
 	</head>
 <!-- header::End -->
 <!-- body::Start -->
@@ -43,7 +43,7 @@
   </div>
   <div class="row">
     <div class="small-9 medium-9 large-9 columns">
-      <h4>Tracking Resource Statistics</h4>
+      <h4>Getting started with ACEv11 - Resource Statistics</h4>
     </div>
     <div class="small-3 medium-3 large-3 columns"> 
       <!--a href="javascript:;" onclick="openHelpSystem('/com.ibm.etools.msgbroker.helphome.doc/help_home_msgbroker.htm');" class="small right helplink">IBM Knowledge Center</a-->
@@ -52,7 +52,7 @@
   <hr>
   <div class="row">
     <div class="small-12 medium-12 large-12 columns">
-      <h5> Learn how turn on resource statistics tracking and view them in the WebUI. </h5>
+      <h5> Learn how to view ACE performance information using Resource Statistics </h5>
     </div>
   </div>
   <div class="row content-details">
@@ -63,13 +63,11 @@
       <div class="row">
       
         
-        <p> This tutorial shows how a user would go about enabling resource statistics tracking and then monitor said statistics in real-time. The example uses a pair of message flows which implement transformations and file input/output as the core demonstrative operations. </p>
+        <p> This tutorial shows how to turn on resource statistics and then view the statistics information in real-time using the ACE administrative Web UI. This tutorial uses a message flow containing a FileInput and FileOutput message flow node to demonstrate these concepts. </p>
       
-        <p> The server.conf.yaml file will be introduced as a useful way for tweaking the behaviour of an integration server. In this example we will only enable resource statistics tracking. </p>
+        <p> A configuration file, known as &#39;server.conf.yaml&#39;, is used to control the integration server&#39;s resource statistics settings. In this example we will only focus on the resource statistics settings in this file, but many other options are available in order to control the server&#39;s configuration.  </p>
       
-        <p> The user will then make several requests to the server and then shown the resulting raw and processed files in the server working directory. </p>
-      
-        <p> Finally, they will be guided through accessing the WebUI of the server and how to use it to view various resource statistics. More specifically, the statistics regarding File transferring, processing and output. </p>
+        <p> Once an integration server has been created with resource statistics enabled, a simple message flow will be deployed and sent an input file for processing. The resource statistics regarding the file transfer inbound and outbound (statistics for Files Read, Records Read, Bytes Read, Files Created, Records Written, Bytes Written) will be viewed in real-time using the product&#39;s administrative Web UI.  </p>
       
       </div>	  
 		<!-- help links do not work in details page for GA 
@@ -99,7 +97,7 @@
         <div class="panel radius" style="margin:0px; margin-bottom:10px; padding:5px">
           <div class="row">
             <div class="small-2 medium-2 large-2 columns">
-              <img class="icon-image" src="http://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/clock-time_128.png">
+              <img class="icon-image" src="https://ot4i.github.io/iib-tutorials/images/icons/ibmdesign/clock-time_128.png">
             </div>
             <div class="small-10 large-10 columns">
               This tutorial takes approximately <b>15 minutes</b>.
@@ -121,15 +119,13 @@
           <ul>
             
             
-              <li>Finding and editing the server config file</li>
-            
-              <li>Manually enabling resource statistics tracking</li>
-            
-              <li>Configuring File In/Output nodes within flows</li>
+              <li>Finding and editing the server&#39;s configuration file</li>
             
               <li>Accessing the WebUI</li>
             
-              <li>Monitoring the resource statistics in real-time</li>
+              <li>Viewing the resource statistics graphs</li>
+            
+              <li>Configuring the FileInput and FileOutput message flow nodes</li>
             
           </ul>
         </div>
@@ -138,16 +134,16 @@
           <ul>
           
           
-            <li>Understand how to locate the server config file, turn on resource statistics tracking and monitor them in real time using the WebUI. </li>
+            <li>Understand how to locate the server&#39;s configuration file, turn on resource statistics and view them in real time using the Web UI. </li>
           
           </ul>
         </div>
       </div>
     </div>
   </div></body>
-		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
-		<script src="http://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
-		<script src="http://ot4i.github.io/iib-tutorials/js/main.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/jquery.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/foundation.min.js"></script>
+		<script src="https://ot4i.github.io/iib-tutorials/js/main.js"></script>
 	</body>
 <!-- body::End -->
 
