@@ -12,7 +12,7 @@
       <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_2" location="285,89" outputDirectory="C:\ResourceStatsOutput" outputFilename="JSONRecord*.json">
         <translation xmi:type="utility:ConstantString" string="FileOutput - JSON"/>
       </nodes>
-      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="289,20" outputDirectory="C:\ResourceStatsOutput" outputFilename="XMLRecord*.json">
+      <nodes xmi:type="ComIbmFileOutput.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_3" location="289,20" outputDirectory="C:\ResourceStatsOutput" outputFilename="XMLRecord*.xml">
         <translation xmi:type="utility:ConstantString" string="FileOutput - XML"/>
       </nodes>
       <nodes xmi:type="ComIbmCompute.msgnode:FCMComposite_1" xmi:id="FCMComposite_1_4" location="131,48" computeExpression="esql://routine/#FileRecordSplitter_Compute.Main" computeMode="destinationAndMessage">

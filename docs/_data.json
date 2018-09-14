@@ -121,7 +121,7 @@
                     "sections":
           					[
                         {
-                            "section": "Click <span class='application'>Import</span> and the <span class='application'>ResourceStatsApp</span> application will be imported into your workspace. The project conatins a message flow named <span class='application'>FileRecordSplitter</span>, and the BAR file <span class='application'>ResourceStatsDeploy.bar</span>."
+                            "section": "Click <span class='application'>Import</span> and the <span class='application'>ResourceStatsApp</span> application will be imported into your workspace. The project contains a message flow named <span class='application'>FileRecordSplitter</span>, and the BAR file <span class='application'>ResourceStatsDeploy.bar</span>."
                         },
                   			{
                   			    "section": "The message flow is designed to read in a file, record by record, splitting the records from one another using the end of line character.  Each record contains either a JSON or XML structure. The message flow examines the first character of the line in order to decide which one it is, and routes it to the relevant FileOutput node. Each output file name is provided a number which reflects the line number of the record in the input file. This scenario lets us view varying File resource statistics in the web UI."
@@ -162,10 +162,10 @@
                                 "details": "Navigate to this directory and locate the file 'server.conf.yaml'. Open it, and edit the Resource Statistics section (you will need to uncomment the lines and set the following values) as follows:<br><code>Statistics<br>&nbsp;&nbsp;Resource:<br>&nbsp;&nbsp;&nbsp;&nbsp;reportingOn: true</code><br>Save and close the file."
                             },                       
                             {
-                                "details": "Start an Integration Server using the command:<br><code>IntegrationServer --work-dir C:\\ResourceStatsServer --name ResourceStatsServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code><br> in the ACE Command Console and deploy the BAR file in the Application Development Panel."
+                                "details": " In the ACE Command Console, start an Integration Server using the command:<br><code>IntegrationServer --work-dir C:\\ResourceStatsServer --name ResourceStatsServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code><br>Connect to the integration server from your Toolkit's Integration Explorer view (in the bottom left corner by default)."
                             },
 							{
-                                "details": "In the Toolkit, open the message flow <span class='application'>FileRecordSplitter</span>. Examine the FileInput node properties, and on the Basic properties tab edit the <code>Input Directory</code> property to a local directory on your file system. By default this has been set to <code>C:\\ResourceStatsInput</code>. Do the same thing for the two FileOutput nodes, whose output directory has been defaulted to <code>C:\\ResourceStatsOutput</code>. Rebuild the BAR file <span class='application'>ResourceStatsDeploy.bar</span> and drag and drop deploy it the server."
+                                "details": "In the Toolkit, open the message flow <span class='application'>FileRecordSplitter</span>. Examine the FileInput node properties, and on the Basic properties tab edit the <code>Input Directory</code> property to a local directory on your file system. By default this has been set to <code>C:\\ResourceStatsInput</code>. Do the same thing for the two FileOutput nodes, whose output directory has been defaulted to <code>C:\\ResourceStatsOutput</code>. From the Application Development view in the Toolkit, drag and drop deploy the project <span class='application'>ResourceStatsApp</span>, to the server."
                             },
                             {
                                 "details": "Right click on the server in the Toolkit and launch the WebUI."
@@ -193,20 +193,17 @@
                                 "details":
                 								[
                                     {
-                                        "details": "From your Toolkit workspace, look inside the <span class='application'>ResourceStatsApp</span> project and copy the provided input file <span class='application'>InputData.txt</span> and paste it into the input directory on your file system."
+                                        "details": "Open a web browser to view the Web UI for the server (http://localhost:7600) and click on the 'Resource Statistics' tab on the top navigation bar. Wait for a moment and a vertical list of statistics types will appear on the left side of the page, where you should select 'File'."
+									},
+									{
+									    "details":"From your Toolkit workspace, look inside the <span class='application'>ResourceStatsApp</span> project and copy the provided input file <span class='application'>InputData.txt</span> and paste it into the input directory on your file system."
                                     },
                                     {
                                         "details": "Check the output file directory, and you should find several JSON output files and several XML output files. Open these and view the contents if you wish."
                                     },
                                     {
-                                        "details": "Return to the Web UI for the server."
-                                    },
-                                    {
-                                        "details": "Return to the Web UI for the server and navigate to the 'Resource Statistics' tab on the top navigation bar, then select 'File' from the vertical list of statistics types on the left side."
-                        				    },
-                        				    {
-                                        "details": "After waiting a moment, you should see all the graphs (Files Read, Files Created etc.) begin to rise with direct correlation to the amount of data read, processed and written by the server."
-                        				    }                        				    
+                                        "details": "Return to the Web UI for the server, and after a moment you should see several graphs with file statistics (such as Files Read, Records Read, Bytes Read, Files Created, Records Written, Bytes Written) begin to rise with direct correlation to the amount of data read, processed and written by the server."
+                        				 }                        				    
                                 ]
                             }
                         }
