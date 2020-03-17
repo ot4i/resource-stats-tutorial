@@ -150,6 +150,7 @@
                     "sections":
           					[
                       {
+						"section": "You can use resource statistics with node owned integration servers and also independent integration servers. In this tutorial we will use an independent integration server.",
                         "steps":
                         {
                           "type": "ordered",
@@ -168,7 +169,7 @@
                                 "details": "In the Toolkit, open the message flow <span class='application'>FileRecordSplitter</span>. Examine the FileInput node properties, and on the Basic properties tab edit the <code>Input Directory</code> property to a local directory on your file system. By default this has been set to <code>C:\\ResourceStatsInput</code>. Do the same thing for the two FileOutput nodes, whose output directory has been defaulted to <code>C:\\ResourceStatsOutput</code>. From the Application Development view in the Toolkit, drag and drop deploy the project <span class='application'>ResourceStatsApp</span>, to the server."
                             },
                             {
-                                "details": "Right click on the server in the Toolkit and launch the WebUI."
+                                "details": "Right click on the server in the Toolkit and select <span class='application'>Start Web User Interface</span>."
                             }
                           ]
                         }
@@ -193,7 +194,7 @@
                                 "details":
                 								[
                                     {
-                                        "details": "Open a web browser to view the Web UI for the server (http://localhost:7600) and click on the 'Resource Statistics' tab on the top navigation bar. Wait for a moment and a vertical list of statistics types will appear on the left side of the page, where you should select 'File'."
+                                        "details": "Open a web browser to view the Web UI for the server (http://localhost:7600) and navigate to the display of 'Resource Statistics'. For detailed navigation help, please refer to the <a href=\"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bj43320_.html\">Knowledge Center</a> tab on the top navigation bar. When statistics start to appear, view the 'File' statistics."
 									},
 									{
 									    "details":"From your Toolkit workspace, look inside the <span class='application'>ResourceStatsApp</span> project and copy the provided input file <span class='application'>InputData.txt</span> and paste it into the input directory on your file system."
