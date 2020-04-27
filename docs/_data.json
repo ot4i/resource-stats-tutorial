@@ -156,17 +156,17 @@
                           "type": "ordered",
                           "details":
                           [
+							  {
+								"details": "Open an App Connect Enterprise Command Console and create a working directory for an Integration Server using the following command: :<br><ul><li>If you are using a Windows platform: <code>mqsicreateworkdir C:\\ResourceStatsServer</code><br> where <b>C:\\ResourceStatsServer</b> will be the working directory for your integration server.</li><li>If you are using a UNIX platform: <code>mqsicreateworkdir /home/exampleuser/ResourceStatsServer</code><br> where <b>/home/exampleuser/ResourceStatsServer</b> will be the working directory for your integration server.</li></ul>"			  
+							  },
                             {
-                                "details": "Assuming you are using a Windows platform, open an App Connect Enterprise Command Console and create a working directory for an Integration Server using the following command: <br><code>mqsicreateworkdir C:\\ResourceStatsServer</code>"
-                            },
-                            {
-                                "details": "Navigate to this directory and locate the file 'server.conf.yaml'. Open it, and edit the Resource Statistics section (you will need to uncomment the lines and set the following values) as follows:<br><code>Statistics<br>&nbsp;&nbsp;Resource:<br>&nbsp;&nbsp;&nbsp;&nbsp;reportingOn: true</code><br>Save and close the file."
+                                "details": "Navigate to your working directory and locate the file 'server.conf.yaml' (following the above suggestion, this will be <code>C:\\ResourceStatsServer</code> on Windows and <code>/home/exampleuser/ResourceStatsServer</code> on UNIX). Open it, and edit the Resource Statistics section (you will need to uncomment the lines and set the following values) as follows:<br><code>Statistics<br>&nbsp;&nbsp;Resource:<br>&nbsp;&nbsp;&nbsp;&nbsp;reportingOn: true</code><br>Save and close the file."
                             },                       
                             {
-                                "details": " In the ACE Command Console, start an Integration Server using the command:<br><code>IntegrationServer --work-dir C:\\ResourceStatsServer --name ResourceStatsServer --admin-rest-api 7600 --http-port-number 7900 --console-log</code><br>Connect to the integration server from your Toolkit's Integration Explorer view (in the bottom left corner by default)."
-                            },
+                                "details": "In the ACE Command Console, start an Integration Server:<br><ul><li>If you are using a Windows platform: <code>IntegrationServer --work-dir C:\\ResourceStatsServer --name StatsServer --admin-rest-api 7600 --http-port-number 7800 --console-log</code></li><li>If you are using a UNIX platform: <code>IntegrationServer --work-dir /home/exampleuser/ResourceStatsServer --name StatsServer --admin-rest-api 7600 --http-port-number 7800 --console-log</code></li></ul> Connect to the integration server from your Toolkit's Integration Explorer view (in the bottom left corner by default)."							
+							},
 							{
-                                "details": "In the Toolkit, open the message flow <span class='application'>FileRecordSplitter</span>. Examine the FileInput node properties, and on the Basic properties tab edit the <code>Input Directory</code> property to a local directory on your file system. By default this has been set to <code>C:\\ResourceStatsInput</code>. Do the same thing for the two FileOutput nodes, whose output directory has been defaulted to <code>C:\\ResourceStatsOutput</code>. From the Application Development view in the Toolkit, drag and drop deploy the project <span class='application'>ResourceStatsApp</span>, to the server."
+                                "details": "In the Toolkit, open the message flow <span class='application'>FileRecordSplitter</span>. Examine the FileInput node properties, and on the Basic properties tab edit the <code>Input Directory</code> property to a local directory on your file system. By default this has been set to <code>C:\\ResourceStatsInput</code>, but on UNIX for example you might choose <code>/home/exampleuser/ResourceStatsInput</code>. Do the same thing for the two FileOutput nodes, whose output directory has been defaulted to <code>C:\\ResourceStatsOutput</code>, but on UNIX for example you might choose <code>/home/exampleuser/ResourceStatsOutput</code>. From the Application Development view in the Toolkit, drag and drop deploy the project <span class='application'>ResourceStatsApp</span>, to the server."
                             },
                             {
                                 "details": "Right click on the server in the Toolkit and select <span class='application'>Start Web User Interface</span>."
