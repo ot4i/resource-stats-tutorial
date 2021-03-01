@@ -33,7 +33,7 @@
 		<script src="https://ot4i.github.io/iib-tutorials/js/vendor/modernizr.js"></script>
 	</head>
 <!-- header::End -->
-<!-- body::Start -->
+<!-- body::StartA -->
 		<body>
   	<!-- body content here -->
 	<div class="row">
@@ -43,7 +43,7 @@
 	</div>
 	<div class="row">
 	  <div class="small-9 medium-9 large-9 columns">
-	    <h4 class="title">Getting started with ACEv11 - Resource Statistics <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
+	    <h4 class="title">Getting started with ACEv12 - Resource Statistics <action><button class="small radius button" tabindex="0" id="stepsViewDetails" onclick="viewDetails()"> View Details</button> </action></h4>
 	  </div>
 	  <div class="small-3 medium-3 large-3 columns">
 		<a href="javascript:;" onclick="openExternalBrowser('https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm')" class="small right helplink">IBM Knowledge Center</a> 
@@ -119,7 +119,7 @@
 										
 										</li>
 									
-										<li> Navigate to your working directory and locate the file 'server.conf.yaml' (following the above suggestion, this will be <code>C:\ResourceStatsServer</code> on Windows and <code>/home/exampleuser/ResourceStatsServer</code> on UNIX). Open it using your preferred text editor, locate the Resource Statistics section and edit the settings (the comments in the sample help with allowed values, and you may need to remove some # comment characters).  Depending on the precise version of App Connect Enterprise v11 which you are using you will find that these settings are slightly different. In version 11.0.0.8 for example, the settings were changed to have resource statistics turned on by default:<br><code>Statistics<br>&nbsp;&nbsp;Resource:<br>&nbsp;&nbsp;&nbsp;&nbsp;reportingOn: true</code><br>Save and close the file.
+										<li> Navigate to your working directory and locate the file 'server.conf.yaml' (following the above suggestion, this will be <code>C:\ResourceStatsServer</code> on Windows and <code>/home/exampleuser/ResourceStatsServer</code> on UNIX). Open it using your preferred text editor, locate the Resource Statistics section and edit the settings (the comments in the sample help with allowed values, and you may need to remove some # comment characters). Depending on the precise fix pack version of App Connect Enterprise you may find that these settings are slightly different. In ACE version 11.0.0.8 for example, the settings were changed to have statistics turned on by default:<br><code>Statistics<br>&nbsp;&nbsp;Resource:<br>&nbsp;&nbsp;&nbsp;&nbsp;reportingOn: true</code><br>Save and close the file.
 										
 										</li>
 									
