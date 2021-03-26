@@ -32,8 +32,8 @@
   	{
         "_common":
     		{
-            "name": "Getting started with ACEv12 - Resource Statistics",
-            "shortDescription": "Learn how to view ACE performance information using Resource Statistics",
+            "name": "Getting started - Resource Statistics",
+            "shortDescription": "Learn how to view performance information using Resource Statistics",
             "durationText": "This tutorial takes approximately",
             "durationTime": "15 minutes",
             "_resourceToOpenComment": "The ID of the first resource to open when the user imports the tutorial. Resource IDs are defined in the repo_metadata.json Tutorials listing on ot4i.",
