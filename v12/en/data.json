@@ -40,8 +40,8 @@
             "resourceToOpen": "EventRoutingFlow",
             "helpLink":
       			{
-                "text": "IBM Knowledge Center",
-           		"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.ace.home.doc/help_home.htm"
+                "text": "IBM Documentation",
+           		"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/acesw_home.html"
             }
         },
         "pageDetails":
@@ -95,9 +95,9 @@
 				"details":
 				[
 					{
-						"title": "Knowledge Center link to ",
+						"title": "IBM Documentation link to ",
 						"description": "Developing integration solutions by using applications",
-						"link": "https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bi12002_.htm",
+						"link": "https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bi12002_.htm",
 						"type": "web"
 					},
 					{
@@ -194,7 +194,7 @@
                                 "details":
                 								[
                                     {
-                                        "details": "Open a web browser to view the Web UI for the server (http://localhost:7600) and navigate to the display of 'Resource Statistics'. For detailed navigation help, please refer to the <a href=\"https://www.ibm.com/support/knowledgecenter/en/SSTTDS_11.0.0/com.ibm.etools.mft.doc/bj43320_.html\">Knowledge Center</a> tab on the top navigation bar. When statistics start to appear, view the 'File' statistics."
+                                        "details": "Open a web browser to view the Web UI for the server (http://localhost:7600) and navigate to the display of 'Resource Statistics'. For detailed navigation help, please refer to the <a href=\"https://www.ibm.com/docs/SSTTDS_12.0/com.ibm.etools.mft.doc/bj43320_.html\">IBM Documentation</a> tab on the top navigation bar. When statistics start to appear, view the 'File' statistics."
 									},
 									{
 									    "details":"From your Toolkit workspace, look inside the <span class='application'>ResourceStatsApp</span> project and copy the provided input file <span class='application'>InputData.txt</span> and paste it into the input directory on your file system."
